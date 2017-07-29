@@ -35,6 +35,6 @@ app.post("/newfriend", function(req, res) {
     res.send(friends);
   });
 
-app.listen(3000, function() {
+app.listen(PORT, function() {
   console.log("App listening on PORT: " + 3000);
 });
