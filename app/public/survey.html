@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+  integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> 
+  <script src="src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorgin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <title>Friend Finder</title>
+  <link href="styles.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"> 
+ 
+
+</head>
+<body>
+
+<div class="container">
+
+<h2>Survey Questions</h2>
+<hr>
+<h3> About you</h3>
+<form role="form">
+<h4>Name (Required)</h4>
+<input type="text" name id="friend-name" class="form-control" required>
+<h4>Link to Photo Image (Required)</h4>
+<input type="text" name id="photo-link" class="form-control" required>
+<hr>
+
+<div class="questions">
+
+<h3>Question 1</h3>
+<h4>You are always looking for something new to try.</h4>
+<select class="selectpicker" name id="prefrences">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 2</h3>
+<h4>You prefer going out rather to staying in.</h4>
+<select class="selectpicker" name id="prefrences2">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 3</h3>
+<h4>Pizza is one of the best foods ever.</h4>
+<select class="selectpicker" name id="prefrences3">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 4</h3>
+<h4>A night in watching tv is your ideal night.</h4>
+<select class="selectpicker" name id="prefrences4">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 5</h3>
+<h4>Exercise is an important aspect of your life.</h4>
+<select class="selectpicker" name id="prefrences5">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 6</h3>
+<h4>You love animals.</h4>
+<select class="selectpicker" name id="prefrences6">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 7</h3>
+<h4>You like being around large crowds of people.</h4>
+<select class="selectpicker" name id="prefrences7">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 8</h3>
+<h4>You are thoughtful when it comes to other's feelings.</h4>
+<select class="selectpicker" name id="prefrences8">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 9</h3>
+<h4>You are a high energy person.</h4>
+<select class="selectpicker" name id="prefrences9">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<h3>Question 10</h3>
+<h4>You are easily upset.</h4>
+<select class="selectpicker" name id="prefrences10">
+  <option>1 (Strongly Disagree)</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>  
+  <option>5 (Strongly Agree)</option>  
+</select>
+
+<br>
+<button type="submit" class="submitB" >Submit</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+console.log("jQuery");
+
+    $(".submitB").on("click", function(event) {
+      event.preventDefault();
+      console.log("insideClick");
+
+      // Here we grab the form elements
+      var newFriend = {
+        friendName : $("#friend-name").val().trim(),
+        photoLink : $("#photo-link").val().trim(),
+        prefrences : $("#prefrences").val().trim(),
+        prefrences2 : $("#prefrences2").val().trim(),
+        prefrences3 : $("#prefrences3").val().trim(),
+        prefrences4 : $("#prefrences4").val().trim(),
+        prefrences5 : $("#prefrences5").val().trim(),
+        prefrences6 : $("#prefrences6").val().trim(),
+        prefrences7 : $("#prefrences7").val().trim(),
+        prefrences8 : $("#prefrences8").val().trim(),
+        prefrences9 : $("#prefrences9").val().trim(),
+        prefrences10 : $("#prefrences10").val().trim(),
+      };
+
+      console.log(newFriend);
+
+      $.post("/newfriend", newFriend,
+        function(data) {
+            console.log("this is the data", data);
+          if (data) {
+            
+          }
+
+          $("#friend-name").val("");
+          $("#photo-link").val("");
+          $("#prefrences").val("");
+          $("#prefrences2").val("");
+          $("#prefrences3").val("");
+          $("#prefrences4").val("");
+          $("#prefrences5").val("");
+          $("#prefrences6").val("");
+          $("#prefrences7").val("");
+          $("#prefrences8").val("");
+          $("#prefrences9").val("");
+          $("#prefrences10").val("");
+        });
+
+    });
+
+    function runWaitListQuery() {
+
+      var currentURL = window.location.origin;
+
+      $.ajax({ url: currentURL + "/app/data/friends", method: "GET" })
+      .done(function(waitlistData) {
+
+
+        for (var i = 0; i < friendsArray.length; i++) {
+
+          $("#friendsArray" + i + 1).append("<h2><span class='label label-primary'>" + newFriend + "</span> | " + friendsArray[i] + "</h2>");
+        }
+      });
+    }
+
+</script>

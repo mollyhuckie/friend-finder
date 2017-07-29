@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.size {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.jumbotron {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.submitB {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100px;
+    height: 50px;
+}
